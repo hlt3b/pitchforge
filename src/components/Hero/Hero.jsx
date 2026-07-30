@@ -15,7 +15,7 @@ function Hero() {
           and improve your entrepreneurial skills.
         </p>
         <div className="hero__actions">
-          <Link to="/pitch-form" className="btn btn--primary">
+          <Link to="/pitch" className="btn btn--primary">
             Start Pitch
           </Link>
           <a href="#deals" className="btn btn--secondary">

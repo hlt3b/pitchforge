@@ -162,7 +162,7 @@ function PitchForm() {
       return
     }
     submitPitch(formData)
-    navigate('/investor-interview')
+    navigate('/summary')
   }
 
   return (

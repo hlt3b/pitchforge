@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import LandingPage from './pages/LandingPage/LandingPage'
 import PitchForm from './pages/PitchForm/PitchForm'
+import PitchSummary from './pages/PitchSummary/PitchSummary'
 import InvestorInterview from './pages/InvestorInterview/InvestorInterview'
 import './App.css'
 
@@ -29,8 +30,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/pitch-form" element={<PitchForm />} />
-          <Route path="/investor-interview" element={<InvestorInterview />} />
+          <Route path="/pitch" element={<PitchForm />} />
+          <Route path="/summary" element={<PitchSummary />} />
+          <Route path="/interview" element={<InvestorInterview />} />
         </Routes>
       </main>
       <Footer />

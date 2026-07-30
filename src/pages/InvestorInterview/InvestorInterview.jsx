@@ -12,7 +12,7 @@ function InvestorInterview() {
         <div className="container investor-interview__inner">
           <h1>No Pitch Submitted Yet</h1>
           <p>Submit your startup details first to meet your AI investors.</p>
-          <Link to="/pitch-form" className="btn btn--primary">
+          <Link to="/pitch" className="btn btn--primary">
             Go to Pitch Form
           </Link>
         </div>
