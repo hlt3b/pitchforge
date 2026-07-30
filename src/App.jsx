@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage/LandingPage'
 import PitchForm from './pages/PitchForm/PitchForm'
 import PitchSummary from './pages/PitchSummary/PitchSummary'
 import InvestorInterview from './pages/InvestorInterview/InvestorInterview'
+import Results from './pages/Results/Results'
 import './App.css'
 
 function ScrollToHash() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/pitch" element={<PitchForm />} />
           <Route path="/summary" element={<PitchSummary />} />
           <Route path="/interview" element={<InvestorInterview />} />
+          <Route path="/results" element={<Results />} />
         </Routes>
       </main>
       <Footer />

@@ -1,0 +1,85 @@
+.investor-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  transition: border-color 0.2s ease;
+}
+
+.investor-card--interviewing {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.investor-card__avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.investor-card__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.investor-card__name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-h);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.investor-card__style {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.investor-card__status {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.investor-card__status--waiting {
+  color: var(--text-muted);
+  background: var(--bg-alt);
+}
+
+.investor-card__status--interviewing {
+  color: #fff;
+  background: var(--gradient);
+  animation: investor-card-pulse 1.6s ease-in-out infinite;
+}
+
+.investor-card__status--finished {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+@keyframes investor-card-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}

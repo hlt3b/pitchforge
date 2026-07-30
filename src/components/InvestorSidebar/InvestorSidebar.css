@@ -1,0 +1,22 @@
+.investor-sidebar {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  height: fit-content;
+}
+
+.investor-sidebar__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.investor-sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

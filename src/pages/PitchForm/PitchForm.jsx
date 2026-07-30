@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import FormField from '../../components/FormField/FormField'
 import FormSection from '../../components/FormSection/FormSection'
 import usePitchStore from '../../store/usePitchStore'
+import useInterviewStore from '../../store/useInterviewStore'
 import './PitchForm.css'
 
 const FIELD_CONFIG = {
@@ -123,6 +124,7 @@ function PitchForm() {
   const storedPitch = usePitchStore((state) => state.pitch)
   const saveDraft = usePitchStore((state) => state.saveDraft)
   const submitPitch = usePitchStore((state) => state.submitPitch)
+  const resetInterview = useInterviewStore((state) => state.reset)
 
   const [formData, setFormData] = useState(storedPitch)
   const [errors, setErrors] = useState({})
@@ -162,6 +164,7 @@ function PitchForm() {
       return
     }
     submitPitch(formData)
+    resetInterview()
     navigate('/summary')
   }
 
