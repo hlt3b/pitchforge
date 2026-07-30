@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 function Hero() {
@@ -14,9 +15,9 @@ function Hero() {
           and improve your entrepreneurial skills.
         </p>
         <div className="hero__actions">
-          <a href="#how-it-works" className="btn btn--primary">
+          <Link to="/pitch-form" className="btn btn--primary">
             Start Pitch
-          </a>
+          </Link>
           <a href="#deals" className="btn btn--secondary">
             View Deals
           </a>

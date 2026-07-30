@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Deals', href: '#deals' },
-  { label: 'About', href: '#about' },
+  { label: 'Home', to: '/' },
+  { label: 'Deals', to: '/#deals' },
+  { label: 'About', to: '/#about' },
 ]
 
 function Navbar() {
@@ -13,18 +14,18 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar__inner container">
-        <a href="#home" className="navbar__brand">
+        <Link to="/" className="navbar__brand">
           PitchForge
-        </a>
+        </Link>
 
         <nav
           className={`navbar__links ${isOpen ? 'navbar__links--open' : ''}`}
           aria-label="Primary"
         >
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setIsOpen(false)}>
+            <Link key={link.to} to={link.to} onClick={() => setIsOpen(false)}>
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 

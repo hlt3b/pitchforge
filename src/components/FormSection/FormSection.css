@@ -1,0 +1,41 @@
+.form-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.form-section + .form-section {
+  margin-top: 24px;
+}
+
+.form-section__header {
+  margin-bottom: 20px;
+}
+
+.form-section__header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.form-section__header p {
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.form-section__fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-section__fields > :where(:has(textarea)) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .form-section__fields {
+    grid-template-columns: 1fr;
+  }
+}
